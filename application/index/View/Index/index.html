@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="{$Think.config.SYE_WEB_KEYWORDS}" > 
+<meta name="description" content="{$Think.config.SYE_WEB_DESCRIPTION}">
+<title>{$Think.config.SYE_WEB_TITLE}</title> 
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link type="text/css" rel="stylesheet" href="/Public/Index/Style/base.css?{$Think.config.SYE_WEB_STYLE}" />
+<link type="text/css" rel="stylesheet" href="/Public/Index/Style/index.css?{$Think.config.SYE_WEB_STYLE}" />
+<link type="text/css" rel="stylesheet" href="/SeaYee/Script/jquery_css/lightness/jquery_ui.css?{$Think.config.SYE_WEB_STYLE}" />
+<script type="text/javascript" src="/SeaYee/Script/jquery.js?{$Think.config.SYE_WEB_STYLE}"></script>
+<script type="text/javascript" src="/SeaYee/Script/jquery_ui.js?{$Think.config.SYE_WEB_STYLE}"></script>
+<script type="text/javascript" src="/Public/Index/Script/index.js?{$Think.config.SYE_WEB_STYLE}"></script>
+<include file="Public/tongji" />
+</head>
+<body>
+<include file="Public/header" />
+<div class="home" id="home">
+	<ul class="hom_content">
+    	<li class="active" style="background-image:url(/Uploads/Images/Temp/index_bg01.jpg);">
+        	<div class="inner">
+                <img src="/Public/Index/Images/index_home_word.png?{$Think.config.SYE_WEB_STYLE}" width="500" height="200" alt="index_home_word" class="home_word" />
+            </div>
+        </li>
+    	<li style="background-image:url(/Uploads/Images/Temp/index_bg02.jpg);">
+        	<div class="inner">
+                <img src="/Public/Index/Images/index_home_word.png?{$Think.config.SYE_WEB_STYLE}" width="500" height="200" alt="index_home_word" class="home_word" />
+            </div>
+        </li>
+    	<li style="background-image:url(/Uploads/Images/Temp/index_bg01.jpg);">
+        	<div class="inner">
+                <img src="/Public/Index/Images/index_home_word.png?{$Think.config.SYE_WEB_STYLE}" width="500" height="200" alt="index_home_word" class="home_word" />
+            </div>
+        </li>
+    	<li style="background-image:url(/Uploads/Images/Temp/index_bg02.jpg);">
+        	<div class="inner">
+                <img src="/Public/Index/Images/index_home_word.png?{$Think.config.SYE_WEB_STYLE}" width="500" height="200" alt="index_home_word" class="home_word" />
+            </div>
+        </li>
+    </ul>
+    <div class="hom_order">
+    	<form name="OrderForm" id="OrderForm" method="post" action="/Order/room.html">
+    	<ul class="ord_type">
+        	<li class="li_on" id="TypeRoom" onClick="$('#TypeRoom').addClass('li_on');$('#TypeRoom').removeClass('li_off');$('#TypeWater').addClass('li_off');$('#TypeWater').removeClass('li_on');$('#LiRoomnum').show();$('#OrderForm').attr('action', '/Order/room.html');">酒店预订</li>
+            <li class="li_off" id="TypeWater" onClick="$('#TypeWater').addClass('li_on');$('#TypeWater').removeClass('li_off');$('#TypeRoom').addClass('li_off');$('#TypeRoom').removeClass('li_on');$('#LiRoomnum').hide();$('#OrderForm').attr('action', '/Order/spring.html');">温泉预订</li>
+        </ul>
+        <ul class="ord_content">
+            <li>
+                <div class="con_text">到店日期：</div>
+                <div class="con_input"><input type="text" name="txtOpdate" id="txtOpdate" size="30" maxlength="10" value="" readonly /></div>
+            </li>
+            <li>
+                <div class="con_text">离店日期：</div>
+                <div class="con_input"><input type="text" name="txtEddate" id="txtEddate" size="30" maxlength="10" value="" readonly /></div>
+            </li>
+            <li>&nbsp;</li>
+            <li>
+                <div class="con_text">成年人：</div>
+                <div class="con_select"><input type="text" name="txtManum" id="txtManum" size="30" maxlength="10" value="1 位" /><ul>
+                    <li>1 位</li>
+                    <li>2 位</li>
+                    <li>3 位</li>
+                    <li>4 位</li>
+                    <li>5 位</li>
+                    <li>6 位</li>
+                    <li>7 位</li>
+                    <li>8 位</li>
+                    <li>9 位</li>
+                    <li>10 位</li>
+                </ul></div>
+            </li>
+            <li>
+                <div class="con_text">儿童：</div>
+                <div class="con_select"><input type="text" name="txtChlnum" id="txtChlnum" size="30" maxlength="10" value="0 位" /><ul>
+                    <li>0 位</li>
+                    <li>1 位</li>
+                    <li>2 位</li>
+                    <li>3 位</li>
+                    <li>4 位</li>
+                    <li>5 位</li>
+                    <li>6 位</li>
+                    <li>7 位</li>
+                    <li>8 位</li>
+                    <li>9 位</li>
+                    <li>10 位</li>
+                </ul></div>
+            </li>
+            <li id="LiRoomnum">
+                <div class="con_text">房间数：</div>
+                <div class="con_select"><input type="text" name="txtRomnum" id="txtRomnum" size="30" maxlength="10" value="1 间" /><ul>
+                    <li>1 间</li>
+                    <li>2 间</li>
+                    <li>3 间</li>
+                    <li>4 间</li>
+                    <li>5 间</li>
+                    <li>6 间</li>
+                    <li>7 间</li>
+                    <li>8 间</li>
+                    <li>9 间</li>
+                    <li>10 间</li>
+                </ul></div>
+            </li>
+        </ul>
+        <div class="ord_submit"><input type="submit" name="btnSubmit" id="btnSubmit" value="搜索" /></div>
+    	</form>
+    </div>
+</div>
+<script type="text/javascript">HomeFullpage();$(window).resize(function(){setTimeout(HomeFullpage, 600)});</script>
+<div class="imglist" id="imglist">
+	<ul class="lst_content">
+        <li class="item1"><a href="/Images/info/id/{$imlist.0.class_id}.html" target="_blank">
+            <img class="item_img" src="{$imlist.0.images_thumb_01}" alt="{$imlist.0.images_title}" />
+            <div class="item_con">
+            	<p>{$imlist.0.images_title}</p>
+                <span>{$imlist.0.class_name}</span>
+            </div>
+        </a></li>
+        <li class="item2">
+            <img class="item_img_t" src="/Public/Index/Images/index_imglist_type.jpg" />
+            <div class="item_type">
+                <div id="a_hotel" onClick="SetType('1');">
+                    <img src="/Public/Index/Images/index_ico_hotel.png" width="60" height="60" alt="酒店" >
+                    <span>客房</span>
+                </div>
+                <div id="a_water" onClick="SetType('2');">
+                    <img src="/Public/Index/Images/index_ico_water.png" width="60" height="60" alt="温泉" >
+                    <span>温泉</span>
+                </div>
+                <div id="a_meeting" onClick="SetType('3');">
+                    <img src="/Public/Index/Images/index_ico_meeting.png" width="60" height="60" alt="会议" >
+                    <span>会议</span>
+                </div>
+                <div id="a_food" onClick="SetType('4');">
+                    <img src="/Public/Index/Images/index_ico_food.png" width="60" height="60" alt="餐饮" >
+                    <span>餐饮</span>
+                </div>
+                <div id="a_set" onClick="SetType('5');">
+                    <img src="/Public/Index/Images/index_ico_set.png" width="60" height="60" alt="配套" >
+                    <span>配套</span>
+                </div>
+                <div id="a_share" onClick="SetType('6');">
+                    <img src="/Public/Index/Images/index_ico_share.png" width="60" height="60" alt="奢享" >
+                    <span>奢享</span>
+                </div>
+            </div>
+        </li>
+        <li class="item3"><a href="/Images/info/id/{$imlist.1.class_id}.html" target="_blank">
+            <img class="item_img" src="{$imlist.1.images_thumb_03}" alt="{$imlist.1.images_title}" />
+            <div class="item_con">
+            	<p>{$imlist.1.images_title}</p>
+                <span>{$imlist.1.class_name}</span>
+            </div>
+        </a></li>
+        <li class="item4"><a href="/Images/info/id/{$imlist.2.class_id}.html" target="_blank">
+            <img class="item_img" src="{$imlist.2.images_thumb_02}" alt="{$imlist.2.images_title}" />
+            <div class="item_con">
+            	<p>{$imlist.2.images_title}</p>
+                <span>{$imlist.2.class_name}</span>
+            </div>
+        </a></li>
+        <li class="item5"><a href="/Images/info/id/{$imlist.3.class_id}.html" target="_blank">
+            <img class="item_img" src="{$imlist.3.images_thumb_01}" alt="{$imlist.3.images_title}" />
+            <div class="item_con">
+            	<p>{$imlist.3.images_title}</p>
+                <span>{$imlist.3.class_name}</span>
+            </div>
+        </a></li>
+        <li class="item6"><a href="/Images/info/id/{$imlist.4.class_id}.html" target="_blank">
+            <img class="item_img" src="{$imlist.4.images_thumb_04}" alt="{$imlist.4.images_title}" />
+            <div class="item_con">
+            	<p>{$imlist.4.images_title}</p>
+                <span>{$imlist.4.class_name}</span>
+            </div>
+        </a></li>
+    </ul>
+    <div class="img_item_more" style="display:none;">加载更多信息…</div>
+</div>
+<script type="text/javascript" src="/Public/Index/Script/moment.min.js?{$Think.config.SYE_WEB_STYLE}"></script>
+<script type="text/javascript" src="/Public/Index/Script/stay.js?{$Think.config.SYE_WEB_STYLE}"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.item_type div').hover(function(){
+		$(this).css({'opacity':'0.5','filter':'alpha(Opacity=50)','-moz-opacity':'0.5'});
+	}, function(){
+		$(this).css({'opacity':'1','filter':'alpha(Opacity=100)','-moz-opacity':'1'});
+	});
+	$('.lst_content li').css("opacity", 1).hover(function(){
+        $(this).find('.item_con').stop(true, false).animate({"backgroundColor":"#5a3226", "backgroundColor":"rgba(90, 50, 38, 0.9)"}, 200);
+    }, function(){
+        $(this).find('.item_con').stop(true, false).animate({"backgroundColor":"#303030", "backgroundColor":"rgba(48, 48, 48, 0.6)"}, 200);
+    });
+	responsiveSize();
+	window.onresize = responsiveSize;
+});
+</script>
+<include file="Public/footer" />
+</body>
+</html>
